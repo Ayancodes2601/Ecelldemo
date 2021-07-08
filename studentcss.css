@@ -146,6 +146,20 @@ body {
     padding-right: 5px;
 }
 
+.checkbtn {
+    font-size: 30px;
+    color: tomato;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 .section-header {
     text-align: center;
     color: maroon;
@@ -179,8 +193,8 @@ body {
 
 .mempic {
     margin: 15px;
-    width: 100;
-    height: 150;
+    width: auto;
+    height: auto;
     border-radius: 3.5px;
 }
 
@@ -242,13 +256,12 @@ body {
 .column {
     float: left;
     width: 30%;
-    padding-left: 10rem;
+    padding-left: 7rem;
     text-align: left;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.0rem;
     text-decoration: none;
     color: chocolate;
-    padding-left: 180px;
 }
 
 .row:after {
@@ -288,4 +301,102 @@ body {
  ::-webkit-scrollbar-thumb {
     background: cyan;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .header {
+        height: auto;
+    }
+    .mempic {
+        width: 80%;
+        height: auto;
+    }
+    .name_id {
+        font-size: 2.0rem;
+    }
+    .design_id {
+        font-size: 1.4rem;
+    }
+    .row-2 {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        height: auto;
+    }
+    .header_main-nav li {
+        margin-left: 25px;
+    }
+    .column {
+        font-size: 1.5rem;
+        padding-left: 5rem;
+    }
+    .social-media .fa {
+        font-size: 25px;
+        width: 35px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+    .header_main-nav li {
+        margin-left: 15px;
+    }
+    .header_main-nav li a:link,
+    .header_main-nav li a:visited {
+        font-size: 1.28rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        height: auto;
+    }
+    .header_main-nav {
+        position: fixed;
+        display: block;
+        width: 50%;
+        height: 100vh;
+        background: #2c3e50;
+        color: white;
+        top: 0px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .header_main-nav li a:link,
+    .header_main-nav li a:visited {
+        display: block;
+        font-size: 20px;
+    }
+    .checkbtn {
+        display: block;
+    }
+    #check:checked~.header_main-nav {
+        left: 0;
+    }
+    .heading h1 {
+        font-size: 4.0rem;
+    }
+    .row-1 {
+        display: table;
+    }
+    .col-1 {
+        margin-bottom: 15px;
+    }
+    .row-2 {
+        display: table;
+    }
+    .name_id {
+        font-size: 2.7rem;
+    }
+    .design_id {
+        font-size: 1.7rem;
+    }
 }

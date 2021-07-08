@@ -144,6 +144,20 @@
         padding-right: 5px;
     }
     
+    .checkbtn {
+        font-size: 30px;
+        color: tomato;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    #check {
+        display: none;
+    }
+    
     .section-header {
         text-align: center;
         color: maroon;
@@ -267,4 +281,74 @@
      ::-webkit-scrollbar-thumb {
         background: cyan;
         border-radius: 10px;
+    }
+    
+    @media only screen and (max-width: 1440px) {
+        .header {
+            height: auto;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        .header {
+            height: auto;
+        }
+        .header_main-nav li {
+            margin-left: 25px;
+        }
+        .column {
+            font-size: 1.5rem;
+            padding-left: 5rem;
+        }
+        .social-media .fa {
+            font-size: 25px;
+            width: 35px;
+            padding-right: 5px;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .header {
+            height: auto;
+        }
+        .header_main-nav li {
+            margin-left: 15px;
+        }
+        .header_main-nav li a:link,
+        .header_main-nav li a:visited {
+            font-size: 1.28rem;
+        }
+        .portfolio__image img {
+            -webkit-filter: none;
+            filter: none;
+        }
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .header {
+            height: auto;
+        }
+        .header_main-nav {
+            position: fixed;
+            display: block;
+            width: 50%;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            top: 0px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+        .header_main-nav li a:link,
+        .header_main-nav li a:visited {
+            display: block;
+            font-size: 20px;
+        }
+        .checkbtn {
+            display: block;
+        }
+        #check:checked~.header_main-nav {
+            left: 0;
+        }
     }
